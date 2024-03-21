@@ -1,93 +1,64 @@
-body{
-    background-color: rgb(229, 238, 235);
-    text-align: center;
-}
-
-
-h1 {
-    font-size: 4rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    z-index: 1;
-    margin-bottom: 0;
-}
-
-
-
-/* image div */
-.bg {
+body {
     width: 100%;
     height: 100vh;
-    background-color: rgb(229, 238, 235);
+    margin: 0;
 }
-
-#img {
-    border: 2px solid;
-    border-radius: 1rem;
-    z-index: 0;
-}
-
-#img:hover {
-    filter: blur(3px);
-}
-
-/* modal box styling */
-#modal-box {
-    display: none;
+.headline {
     width: 100%;
-    height: 100%;
     position: fixed;
-    z-index: 2;
-    left: 0;
     top: 0;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
+    left: 0;
+    text-align: center;
+    background-color: black;
+    z-index: 1;
 }
-
-#feature {
-    position: fixed;
+.header {
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    top: 5%;
-    right: 4%;
-    gap: 1.5%;
-    margin-right: 2%;
+    height: 50vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: -1;
 }
-
-#previous, #next {
-    font-size: 1.25rem;
-    padding: 0.5rem;
-    background-color: white;
-    border-radius: 0.5rem;
-    cursor: pointer;
+span {
+    font-size: 6rem;
 }
-#previous:hover {
-    background-color: lightblue;
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    color: yellow;
+    margin-top: 2rem;
 }
-#next:hover {
-    background-color: lightblue;
-}
-
-.button {
-    cursor: pointer;
-    padding: 0.3rem;
-    font-size: 1rem;
-    border-radius: 0.5rem;
-}
-.button:hover {
-    background-color: lightblue;
-}
-
-#back {
-    font-size: 2rem;
-    cursor: pointer;
+p {
+    font-size: 1.1rem;
     color: white;
 }
 
 
-#modal-box img {
-    padding-top: 5rem;
+
+
+/* styles for content */
+.content {
+    width: 85%;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 40vh;
+}
+.img {
+    height: 200px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    transition: transform 0.5s ease-in-out;
+}
+img:hover {
+    transform: scale(1.1);
+    /* transform: rotate(360deg); */
 }

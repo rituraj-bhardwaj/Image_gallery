@@ -58,3 +58,21 @@ document.getElementById("previous").addEventListener("click", () => {
     document.querySelector(".light-box-img").setAttribute("id", previous_img_serial_no);
   }  
 });
+
+
+
+
+// zoom in and zoom out feature....
+document.querySelector("#zoom-in").addEventListener("click", () => {
+  var width = document.querySelector(".light-box-img").clientWidth; 
+  console.log(width + "px");
+  width += 20;
+  document.querySelector(".light-box-img").style.width = width + "px";
+});
+
+document.querySelector("#zoom-out").addEventListener("click", () => {
+  var width = document.querySelector(".light-box-img").clientWidth;
+  console.log(width +"px");
+  width -= 20;
+  document.querySelector(".light-box-img").style.width = width + "px";
+});

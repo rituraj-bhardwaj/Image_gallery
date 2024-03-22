@@ -23,6 +23,9 @@ document.querySelector("#back").addEventListener("click", () => {
 });
 
 
+
+
+
 // script for next and previous image...
 var img_serial_no;
 
@@ -76,3 +79,43 @@ document.querySelector("#zoom-out").addEventListener("click", () => {
   width -= 20;
   document.querySelector(".light-box-img").style.width = width + "px";
 });
+
+
+// slideshow feature 
+document.querySelector("#slide_show").addEventListener("click", () => {
+
+  const slideshow_path = "m380-300 280-180-280-180v360ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z";
+  const pause_path = "M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z";
+
+  const path_obtained =  document.querySelector("#slide_show svg path").getAttribute("d");
+  console.log(path_obtained);
+
+  if(path_obtained === slideshow_path) {
+    document.querySelector("#slide_show svg path").setAttribute("d", pause_path);
+  } else {
+    document.querySelector("#slide_show svg path").setAttribute("d", slideshow_path);
+  }
+
+});
+
+
+function slideshow() {
+
+}
+
+
+
+
+
+// rorate feature 
+document.querySelector("#rotate").addEventListener("click", () => {
+  alert("this feature is under-development !!!");
+})
+
+
+
+
+// image-info feature
+document.querySelector("#img-info").addEventListener("click", () => {
+  alert("this feature is under-development !!!");
+})

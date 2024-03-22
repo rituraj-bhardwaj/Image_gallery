@@ -123,13 +123,12 @@ p {
 }
 
 .feature {
-    background-color: white;
-    padding: 0.35rem;
+    background-color: rgb(232, 201, 201);
+    padding: 0.25rem;
     border-radius: 0.5rem;
 }
 .feature:hover {
     background-color: yellow;
-    /* border: 2px solid black; */
 }
 
 

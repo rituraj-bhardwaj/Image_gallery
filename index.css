@@ -78,6 +78,15 @@ p {
 }
 
 @media (max-width: 575.98px) {
+    span {
+        font-size: 4rem;
+    }
+    h1 {
+        font-weight: 300;
+    }
+    p {
+        font-size: 1rem;
+    }
     .content {
         width: 90%;
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -85,7 +94,7 @@ p {
     .img {
         height: 100px;
     }
-}
+}   
 
 
 

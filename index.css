@@ -121,6 +121,11 @@ p {
     margin-right: 2%;
     /* background-color: white; */
 }
+@media (max-width: 575.98px) {
+    #light-box-features-div {
+        right: 0;
+    }
+}
 
 .feature {
     background-color: rgb(232, 201, 201);

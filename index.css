@@ -57,9 +57,9 @@ p {
     height: 100%;
     border: 2px solid black;
     border-radius: 0.5rem;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.7s ease-in-out;
 }
-img:hover {
+.img:hover {
     transform: scale(1.1);
     /* transform: rotate(360deg); */
 }

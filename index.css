@@ -29,7 +29,7 @@ h1 {
     font-size: 3rem;
     font-weight: 300;
     color: yellow;
-    margin-top: 2rem;
+    margin-top: 0;
 }
 p {
     font-size: 1.1rem;
@@ -64,6 +64,28 @@ p {
     /* transform: rotate(360deg); */
 }
 
+
+
+/* responsiveness stylesheet */
+@media (min-width: 576px) and (max-width: 1000px) {
+    .content {
+        width: 90%;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .content {
+        width: 90%;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    .img {
+        height: 100px;
+    }
+}
 
 
 
@@ -109,3 +131,4 @@ p {
     justify-content: center;
     align-items: center;
 }
+

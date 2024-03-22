@@ -92,7 +92,7 @@ p {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
     .img {
-        height: 100px;
+        height: 150px;
     }
 }   
 

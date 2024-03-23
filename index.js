@@ -128,9 +128,14 @@ document.querySelector("#slide_show").addEventListener("click", () => {
 
 
 // rorate feature ...........................................................................................
+let rotationAngle = 0;
 document.querySelector("#rotate").addEventListener("click", () => {
-  alert("this feature is under-development !!!");
-})
+  // alert("this feature is under-development !!!");
+
+  rotationAngle -= 90; // Increment rotation angle by 90 degrees
+  document.querySelector(".light-box-img").style.transform = `rotate(${rotationAngle}deg)`;
+  
+});
 
 
 

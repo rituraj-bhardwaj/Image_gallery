@@ -119,6 +119,7 @@ p {
     right: 4%;
     gap: 1.5%;
     margin-right: 2%;
+    z-index: 999;
     /* background-color: white; */
 }
 @media (max-width: 575.98px) {

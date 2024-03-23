@@ -69,14 +69,14 @@ document.getElementById("previous").addEventListener("click", () => {
 document.querySelector("#zoom-in").addEventListener("click", () => {
   var width = document.querySelector(".light-box-img").clientWidth; 
   console.log(width + "px");
-  width += 20;
+  width += 80;
   document.querySelector(".light-box-img").style.width = width + "px";
 });
 
 document.querySelector("#zoom-out").addEventListener("click", () => {
   var width = document.querySelector(".light-box-img").clientWidth;
   console.log(width +"px");
-  width -= 20;
+  width -= 80;
   document.querySelector(".light-box-img").style.width = width + "px";
 });
 

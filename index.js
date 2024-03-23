@@ -26,7 +26,7 @@ document.querySelector("#back").addEventListener("click", () => {
 
 
 
-// script for next and previous image...
+// script for next and previous image.........................................................................
 var img_serial_no;
 
 document.getElementById("next").addEventListener("click", () => {
@@ -65,7 +65,7 @@ document.getElementById("previous").addEventListener("click", () => {
 
 
 
-// zoom in and zoom out feature....
+// zoom in and zoom out feature....................................................................
 document.querySelector("#zoom-in").addEventListener("click", () => {
   var width = document.querySelector(".light-box-img").clientWidth; 
   console.log(width + "px");
@@ -81,7 +81,29 @@ document.querySelector("#zoom-out").addEventListener("click", () => {
 });
 
 
-// slideshow feature 
+// slideshow feature................................................................................
+
+let slideshowTimeout;
+function slideshow() {
+  img_serial_no = document.querySelector(".light-box-img").getAttribute("id");
+  img_serial_no = parseInt(img_serial_no);
+  const next_img_serial_no = img_serial_no + 1;
+
+  const next_img = document.querySelectorAll(".img img")[next_img_serial_no];
+  // console.log(next_img);
+
+  const next_img_source = next_img.getAttribute("src");
+  // console.log(next_img_source);
+
+  document.querySelector(".light-box-img").setAttribute("src", next_img_source);
+  document.querySelector(".light-box-img").setAttribute("id", next_img_serial_no);
+
+  if (next_img_serial_no < 25 )
+  {
+    slideshowTimeout = setTimeout(slideshow, 2000);
+  }
+}
+
 document.querySelector("#slide_show").addEventListener("click", () => {
 
   const slideshow_path = "m380-300 280-180-280-180v360ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z";
@@ -92,30 +114,27 @@ document.querySelector("#slide_show").addEventListener("click", () => {
 
   if(path_obtained === slideshow_path) {
     document.querySelector("#slide_show svg path").setAttribute("d", pause_path);
+    slideshow();
+    // document.querySelector("#slideshow_play").setAttribute("id", "slideshow_pause");
   } else {
     document.querySelector("#slide_show svg path").setAttribute("d", slideshow_path);
+    clearTimeout(slideshowTimeout);
+    // document.querySelector("#slideshow_pause").setAttribute("id", "slideshow_play");
   }
+
 
 });
 
 
-function slideshow() {
 
-}
-
-
-
-
-
-// rorate feature 
+// rorate feature ...........................................................................................
 document.querySelector("#rotate").addEventListener("click", () => {
   alert("this feature is under-development !!!");
 })
 
 
 
-
-// image-info feature
+// image-info feature..........................................................................................
 document.querySelector("#img-info").addEventListener("click", () => {
   alert("this feature is under-development !!!");
 })
